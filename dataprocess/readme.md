@@ -1,4 +1,4 @@
-This repository is the data processing code of paper **"Socialformer:SocialNetworkInspiredLongDocument ModelingforDocumentRanking"**
+This repository is the data processing code of paper **"Socialformer: Social Network Inspired Long Document Modeling for Document Ranking"**
 
 To run the code, you need to run `./run.sh` or follow the steps below.
 
