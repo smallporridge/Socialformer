@@ -2,7 +2,8 @@
 The implement of Socialformer
 
 ## requirement
-python >= 3.6
+python >= 3.6.0
+
 pytorch >= 1.9.0
 
 ## How to start
