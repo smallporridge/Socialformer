@@ -1,4 +1,4 @@
-# Pre_process
+# Preprocess
 This is the data processing code of paper **"Socialformer: Social Network Inspired Long Document Modeling for Document Ranking"**
 
 ## Usage
