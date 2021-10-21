@@ -1,12 +1,25 @@
 # Socialformer
-The implement of Socialformer
+Source code of "Socialformer: Social Network Inspired Long Document Modeling for Document Ranking"
 
-## requirement
-python >= 3.6.0
+## Requirements
++ python >= 3.6.0
++ pytorch >= 1.9.0 (with GPU support)
++ Transformers >= 4.5.1
++ pytrec-eval == 0.5
 
-pytorch >= 1.9.0
+## Dataset
++ MS MARCO Document Ranking[https://github.com/microsoft/MSMARCO-Document-Ranking]
++ TREC 2019 Deep Learning[https://microsoft.github.io/msmarco/TREC-Deep-Learning-2019.html]
 
-## How to start
-First, referring to `/dataprocess`, including probability computing, graph construction, and graph partition.
+## Pre_Process
++ Referring to `/dataprocess`, including probability computing, graph construction, and graph partition.
+'''
+bash ./dataprocess/run.sh
+'''
 
-Then, referring to `/model`, train and test the model.
+## Model training
+
++ Referring to `/model`, train and test the model.
+'''
+bash ./model/run.sh
+'''
