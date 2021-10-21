@@ -11,7 +11,7 @@ Source code of "Socialformer: Social Network Inspired Long Document Modeling for
 + [MS MARCO Document Ranking](https://github.com/microsoft/MSMARCO-Document-Ranking)
 + [TREC 2019 Deep Learning](https://microsoft.github.io/msmarco/TREC-Deep-Learning-2019.html)
 
-## Pre_Process
+## PreProcess
 + Referring to `/dataprocess`, including probability computing, graph construction, and graph partition.
 
 ```
