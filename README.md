@@ -14,14 +14,14 @@ Source code of "Socialformer: Social Network Inspired Long Document Modeling for
 ## Pre_Process
 + Referring to `/dataprocess`, including probability computing, graph construction, and graph partition.
 
-'''
+```
 bash ./dataprocess/run.sh
-'''
+```
 
 ## Model training
 
 + Referring to `/model`, train and test the model.
 
-'''
+```
 bash ./model/run.sh
-'''
+```
