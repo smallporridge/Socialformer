@@ -1,5 +1,5 @@
 # Preprocess
-This is the data processing code of paper **"Socialformer: Social Network Inspired Long Document Modeling for Document Ranking"**
+This is the data processing code of paper "Socialformer: Social Network Inspired Long Document Modeling for Document Ranking"
 
 ## Usage
 To run the code, you need to run `./run.sh` or follow the steps below.
