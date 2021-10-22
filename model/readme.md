@@ -9,3 +9,4 @@ To train our two-stage information transimission model, using `run.sh` to start 
 + `model.py` is the neural network model.
 + `list_dataset_all.py` is preparing listwise data for training.
 + `point_dataset_all.py` is prepraring pointwise data for testing.
++ `evaluate.py` is the implementation of evaluation metrics.
