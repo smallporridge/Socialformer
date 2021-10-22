@@ -5,7 +5,7 @@ python train.py \
 		--dataset_script_dir ./data_scripts \
 		--dataset_cache_dir ./negs_cache_listwise_2048 \
 		--log_path ./log.txt \
-		--train_file ./data/list_train \
+		--train_file ./data/marco_train \
 		--dev_file  ./data/marco_dev/all.json \
 		--dev_id_file ./data/marco_dev/ids.tsv \
 		--msmarco_score_file_path ./score.txt \
