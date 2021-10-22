@@ -1,9 +1,8 @@
 # Socialformer
 Source code of "Socialformer: Social Network Inspired Long Document Modeling for Document Ranking". 
 
-For double-blind review, we use anonymous github to hide the information that may reveal the identity.
-
-We would like to express our deep appreciation for all reviewers.
++ For double-blind review, we use anonymous github to hide the information that may reveal the identity.
++ We would like to express our deep appreciation for all reviewers.
 
 ## Requirements
 + python >= 3.6.0
