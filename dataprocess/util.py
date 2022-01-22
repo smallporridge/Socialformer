@@ -7,38 +7,55 @@ import matplotlib.pyplot as plt
 plt.switch_backend('agg')
 import os
 
-# normalization
-def norm(array):
-    ma=np.max(array)
-    mi=np.min(array)
-    if ma==mi:return array
-    return (array-mi)/(ma-mi)
 
-def multiprocess(func,li,pool_size=16):
+'''
+Normalization
+'''
+def norm(array):
+    max_value=np.max(array)
+    min_value=np.min(array)
+    if max_value == min_value:
+        return array
+    else:
+        return (array-min_value)/(max_value-min_value)
+
+'''
+Use multiple processes to accelerate
+'''
+def multiprocess(func,args_list,pool_size=16):
+    '''
+    Args:
+        func: the function to run
+        args_list: a list, every item in the list is a set of arguments for func
+        pool_size: number of processes
+    '''
     p=Pool(pool_size)        
-    ans_li=p.map(func,li)  
+    ans_list=p.map(func,args_list)  
     p.close()
     p.join()   
-    return ans_li
+    return ans_list
 
-
-def load_json_file(root_path):
+'''
+Load training data, each line of data_path is a dictionary like: {'qry':[xx,xx], 'psg':[xx,xx]}
+'''
+def load_json_file(data_path):
     print("--------------------loading files---------------------")
-    papers=[]
-    file = open(root_path, 'r', encoding='utf-8')  
+    dic_list=[]
+    file = open(data_path, 'r', encoding='utf-8')  
     for line in tqdm(file.readlines()):
-        papers.append(json.loads(line))   
+        dic_list.append(json.loads(line))   
     print("-------------------------------------------------------")
-    return papers
+    return dic_list
 
-
-def matrix_visualize(name,matrix):
-    root_path="./results/"
-    if not os.path.exists(root_path):
-        os.mkdir(root_path)
-    save_path=root_path+"/"+name+".pdf"
-    # Display matrix
-    
+'''
+Visualize a numpy matrix
+'''
+def matrix_visualize(save_path,matrix):
+    '''
+    Args:
+        save_path: str
+        matrix: numpy.ndarray
+    '''
     plt.matshow(matrix.astype(int))
     plt.tight_layout()
     plt.savefig(save_path)

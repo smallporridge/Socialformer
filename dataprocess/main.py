@@ -53,8 +53,8 @@ def build_graph(li):
 
     # print("Actual sparsity: ",np.sum(graph)/n/n)
     
-    subgraph1=get_subgraph_edge(data['psg'],graph.copy(),n,k=args.subgraph_number,max_subgraph_node=128)
-    subgraph2=get_subgraph_node(data['psg'],graph.copy(),n,k=args.subgraph_number,max_subgraph_node=128)
+    subgraph1=get_subgraph_edge(data['psg'],graph.copy(),args.subgraph_number,max_subgraph_node=128)
+    subgraph2=get_subgraph_node(data['psg'],graph.copy(),args.subgraph_number,max_subgraph_node=128)
 
     # concat the original passages slice
     ori_slice=[]

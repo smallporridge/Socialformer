@@ -1,0 +1,3 @@
+/dataprocess/bert/model/*
+/dataprocess/bert/dataset_cache/*
+/dataprocess/weights/*

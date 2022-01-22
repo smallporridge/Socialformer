@@ -3,23 +3,38 @@ import numpy as np
 import pickle
 from tqdm import tqdm
 
-# get static probability matrix of length n
+
+'''
+calculate static distance based probability matrix of size n*n
+'''
 def get_static_distance_matrix(n):
-    w=np.zeros((n,n))
+    '''
+    Args: 
+        n: [int] node number
+    Return:
+        normalized probability matrix
+    '''
+    probability_matrix=np.zeros((n,n))
     for i in range(n):
         for j in range(i,n):
-            w[i][j]=w[j][i]=1/((j-i)//50+1)**2
-    return norm(w)
+            '''
+            P_{sd}(i,j)=\frac{1}{(1+|i-j|/p)^2}
+            '''
+            probability_matrix[i][j]=probability_matrix[j][i]=1/((j-i)//50+1)**2
+    return norm(probability_matrix)
 
-# load the static probability matrix    
-def load_static(n,root_path="./weights/static/"):
-    path=root_path+str(n)+".txt"
+'''
+load the precalculate static distance based probability matrix   
+'''
+def load_static(node_num,root_path="./weights/static/"):
+    path=root_path+str(node_num)+".txt"
     with open(path,"rb") as f:
-        ans=pickle.load(f)
-    return np.array(ans)
+        matrix=pickle.load(f)
+    return np.array(matrix)
 
 
 if __name__=="__main__":
+    # precalculate static distance based probability
     for i in tqdm(range(1,2050)):
         w=get_static_distance_matrix(i)
         path="./weights/static/"+str(i)+".txt"
