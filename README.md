@@ -18,7 +18,8 @@ Source code of "Socialformer: Social Network Inspired Long Document Modeling for
 + Referring to `/dataprocess`, including probability computing, graph construction, and graph partition.
 
 ```
-bash ./dataprocess/run.sh
+cd dataprocess
+bash ./run.sh
 ```
 
 ## Model training
