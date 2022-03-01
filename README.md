@@ -1,8 +1,5 @@
 # Socialformer
-Source code of "Socialformer: Social Network Inspired Long Document Modeling for Document Ranking". 
-
-+ For double-blind review, we use anonymous github to hide the information that may reveal the identity.
-+ We would like to express our deep appreciation for all reviewers.
+Source code of WWW2022 long paper "Socialformer: Social Network Inspired Long Document Modeling for Document Ranking". 
 
 ## Requirements
 + python >= 3.6.0
@@ -29,3 +26,17 @@ bash ./run.sh
 ```
 bash ./model/run.sh
 ```
+
+## Citations
+If you use the code, please cite the following paper:  
+```
+@inproceedings{ZhouDYM22,
+  author    = {Yujia Zhou and
+               Zhicheng Dou and
+               Huaying Yuan and
+               Zhengyi Ma},
+  title     = {Socialformer: Social Network Inspired Long Document Modeling for Document Ranking},
+  booktitle = {{WWW}},
+  publisher = {{ACM}},
+  year      = {2022}
+}
