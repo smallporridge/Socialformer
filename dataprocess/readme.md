@@ -7,7 +7,7 @@ To run the code, you need to run
 or follow the steps below.
 
 + Run `python gen_xxxx_weight.py` to pre-calculate the weights.
-+ Run `bash paste.sh` to concat the strategy weight and original passage according to columns, this  can reduce I/O operation.
++ Run `paste -d $ data/demo.json weights/tfidf.txt weights/bert.txt weights/dynamic.txt > weights/total.txt` to concat the strategy weight and original passage according to columns, this  can reduce I/O operation.
 + Run `python main.py` to build the social network and seperate it to subgraphs
 
 
