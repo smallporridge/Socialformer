@@ -2,10 +2,12 @@
 Source code of WWW2022 long paper "Socialformer: Social Network Inspired Long Document Modeling for Document Ranking". 
 
 ## Requirements
-+ python >= 3.6.0
-+ pytorch >= 1.9.0 (with GPU support)
-+ Transformers >= 4.5.1
++ python == 3.7.0
++ pytorch == 1.9.0 (with GPU support)
++ Transformers == 4.8.1
 + pytrec-eval == 0.5
+
+More details please refer to 'requirements.txt'.
 
 ## Dataset
 + [MS MARCO Document Ranking](https://github.com/microsoft/MSMARCO-Document-Ranking)
