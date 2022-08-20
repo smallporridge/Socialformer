@@ -1,0 +1,9 @@
+datasets==1.11.0
+matplotlib==2.2.3
+numpy==1.21.2
+pandas==0.24.2
+pyarrow==5.0.0
+pytrec_eval==0.5
+torch==1.9.0
+tqdm==4.63.0
+transformers==4.8.1
